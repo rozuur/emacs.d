@@ -30,3 +30,6 @@
 ;; Prevent unwanted runtime builds; packages are compiled ahead-of-time when
 ;; they are installed and site files are compiled when gccemacs is installed.
 (setq comp-deferred-compilation nil)
+
+;; Start emacs frames in fullscreen maximized
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
