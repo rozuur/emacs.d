@@ -52,6 +52,7 @@
   (require 'doom-core)
   (require 'init-backups)
   (require 'init-company)
+  (require 'init-recentf)
   (require 'init-ediff))
 
 
