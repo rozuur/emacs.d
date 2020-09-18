@@ -21,6 +21,8 @@
 (straight-use-package 'company)
 (straight-use-package 'paren)
 (straight-use-package 'flycheck)
+(straight-use-package 'exec-path-from-shell)
+
 
 
 (provide 'straight)
