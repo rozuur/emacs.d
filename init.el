@@ -42,7 +42,7 @@
   (require 'straight (concat user-emacs-directory "straight.el"))
 
   ;; Load rest of the libraries
-  (require 'init-looks)
+  (require 'init-ui)
   
   )
 
