@@ -13,4 +13,10 @@
 	(eval-print-last-sexp)))
     (load bootstrap-file nil 'nomessage))
 
+
+;; Also install packages
+(straight-use-package 'leuven-theme)
+(straight-use-package 'gcmh)
+
+
 (provide 'straight.el)

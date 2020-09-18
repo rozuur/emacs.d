@@ -1,7 +1,7 @@
 ;;; init-ui.el -*- coding: utf-8; lexical-binding: t; -*-
 
 ;;; Theme
-(straight-use-package 'leuven-theme)
+
 
 (load-theme 'leuven t)
 
@@ -25,6 +25,11 @@
 ;; especially for tabs.
 (setq x-stretch-cursor nil)
 
+;; Don't resize windows & frames in steps; it's prohibitive to prevent the user
+;; from resizing it to exact dimensions, and looks weird.
+(setq window-resize-pixelwise t
+      frame-resize-pixelwise t)
+
 
 ;;; Fringes
 
@@ -32,6 +37,14 @@
 ;; useful information, like git-gutter and flycheck.
 (setq indicate-buffer-boundaries nil
       indicate-empty-lines nil)
+
+
+;; The native border "consumes" a pixel of the fringe on righter-most splits,
+;; `window-divider' does not. Available since Emacs 25.1.
+(setq window-divider-default-places t
+      window-divider-default-bottom-width 1
+      window-divider-default-right-width 1)
+(add-hook 'doom-init-ui-hook #'window-divider-mode)
 
 
 ;;; Bars and Dialogs
