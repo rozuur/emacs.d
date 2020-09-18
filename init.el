@@ -51,6 +51,7 @@
   (require 'init-ux)
   (require 'doom-core)
   (require 'init-backups)
+  (require 'init-company)
   (require 'init-ediff))
 
 

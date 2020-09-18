@@ -17,6 +17,7 @@
 ;; Also install packages
 (straight-use-package 'leuven-theme)
 (straight-use-package 'gcmh)
+(straight-use-package 'company)
 
 
 (provide 'straight.el)
