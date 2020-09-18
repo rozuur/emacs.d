@@ -44,8 +44,7 @@
   ;; Load rest of the libraries
   (require 'init-ui)
   (require 'init-ux)
-  
-  )
+  (require 'init-ediff))
 
 ;; For now instead of gchm, reset manually
 (setq best-gc-cons-threshold (* 64 1024 1024))
