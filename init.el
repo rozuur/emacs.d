@@ -1,4 +1,4 @@
-;;; init.el -*- coding: utf-8; lexical-binding: t; -*-
+;;; init.el --- Init file -*- coding: utf-8; lexical-binding: t; -*-
 
 (let* ((minver "27.1"))
   (when (version< emacs-version minver)
@@ -53,6 +53,7 @@
   (require 'init-backups)
   (require 'init-company)
   (require 'init-recentf)
+  (require 'init-checks)
   (require 'init-ediff))
 
 

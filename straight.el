@@ -20,6 +20,7 @@
 (straight-use-package 'gcmh)
 (straight-use-package 'company)
 (straight-use-package 'paren)
+(straight-use-package 'flycheck)
 
 
 (provide 'straight)
