@@ -35,4 +35,18 @@
 (add-hook 'eshell-mode-hook (lambda () (hscroll-margin 0)))
 (add-hook 'term-mode-hook (lambda () (hscroll-margin 0)))
 
+;;; Parens
+
+(add-hook 'after-init-hook 'show-paren-mode)
+
+(setq show-paren-delay 0.1
+      show-paren-highlight-openparen t
+      show-paren-when-point-inside-paren t
+      show-paren-when-point-in-periphery t)
+
+;; Show trailing whitespace
+(setq show-trailing-whitespace 't)
+;; Delete trailing whitespace when saving
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (provide 'init-ux)

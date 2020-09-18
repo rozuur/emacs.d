@@ -18,6 +18,7 @@
 (straight-use-package 'leuven-theme)
 (straight-use-package 'gcmh)
 (straight-use-package 'company)
+(straight-use-package 'paren)
 
 
 (provide 'straight.el)
