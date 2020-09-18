@@ -43,6 +43,7 @@
 
   ;; Load rest of the libraries
   (require 'init-ui)
+  (require 'init-ux)
   
   )
 
