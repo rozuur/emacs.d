@@ -18,6 +18,7 @@
 ;; Also install packages
 (straight-use-package 'leuven-theme)
 (straight-use-package 'gcmh)
+(straight-use-package 'ag)
 (straight-use-package 'company)
 (straight-use-package 'paren)
 (straight-use-package 'flycheck)

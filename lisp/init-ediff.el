@@ -4,6 +4,8 @@
 (defun ediff-startup-hook-setup ()
   ;; hide control panel if it's current buffer
   (when (string-match-p "\*Ediff Control Panel.*\*" (buffer-name))
+    ;; Ignore whitespace
+    (setq ediff-diff-options "-w")
     ;; show only clashed area
     (ediff-toggle-show-clashes-only)
     ;; move to the first difference

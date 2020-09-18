@@ -128,7 +128,7 @@
 ;; Adopt a sneaky garbage collection strategy of waiting until idle time to
 ;; collect; staving off the collector while the user is working.
 (setq gcmh-idle-delay 5
-      gcmh-high-cons-threshold (* 16 1024 1024)  ; 16mb
+      gcmh-high-cons-threshold (* 64 1024 1024)  ; 64mb
       gcmh-verbose doom-debug-p)
 
 (provide 'doom-core)

@@ -54,6 +54,7 @@
   (require 'init-company)
   (require 'init-recentf)
   (require 'init-checks)
+  (require 'init-grep)
   (require 'init-hippie-expand)
   (require 'init-exec-path)
   (require 'init-ediff))
