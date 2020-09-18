@@ -2,14 +2,25 @@
 
 ;;; Theme
 
-
 (load-theme 'leuven t)
 
 ;; In leuven, fontify the whole line for headings (with a background color).
 (setq org-fontify-whole-heading-line t)
 
 ;;; Font
+(set-face-attribute 'default nil
+                    :family "Consolas for Powerline"
+                    :height 150
+                    :weight 'normal
+                    :width 'normal)
 
+(when (functionp 'set-fontset-font)
+  (set-fontset-font "fontset-default"
+                    'unicode
+                    (font-spec :family "DejaVu Sans Mono"
+                               :width 'normal
+                               :size 15.5
+                               :weight 'normal)))
 
 ;;; Cursor
 
