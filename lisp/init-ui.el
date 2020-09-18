@@ -30,6 +30,14 @@
 (setq window-resize-pixelwise t
       frame-resize-pixelwise t)
 
+;; Some terminals offer two different cursors: a "visible" static cursor and a
+;; "very visible" blinking one. By default, Emacs uses the very visible cursor
+;; and will switch back to it when Emacs is started or resumed. A nil
+;; `visible-cursor' prevents this.
+(setq visible-cursor nil)
+
+;; Enable the mouse in terminal Emacs
+(add-hook 'tty-setup-hook #'xterm-mouse-mode)
 
 ;;; Fringes
 

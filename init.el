@@ -50,6 +50,7 @@
   (require 'init-ui)
   (require 'init-ux)
   (require 'doom-core)
+  (require 'init-backups)
   (require 'init-ediff))
 
 
