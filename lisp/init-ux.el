@@ -49,4 +49,9 @@
 ;; Delete trailing whitespace when saving
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Ido mode
+(setq ido-enable-flex-matching t)
+(ido-mode 't)
+(ido-yes-or-no-mode 't)
+
 (provide 'init-ux)
