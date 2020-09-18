@@ -7,6 +7,11 @@
 (setq emacs-load-start-time (current-time))
 (setq user-emacs-directory (file-name-directory load-file-name))
 
+(defconst IS-MAC     (eq system-type 'darwin))
+(defconst IS-LINUX   (eq system-type 'gnu/linux))
+(defconst IS-WINDOWS (memq system-type '(cygwin windows-nt ms-dos)))
+(defconst IS-BSD     (or IS-MAC (eq system-type 'berkeley-unix)))
+
 ;; Load emacs libraries from ~/.emacs.d/lisp directory
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -38,17 +43,15 @@
   ;; ;; `benchmark-init/show-durations-tree' to show benchmark result
   ;; ;; }}
 
-  ;; Bootstrap straight.el
+  ;; Bootstrap packages with straight.el
   (require 'straight (concat user-emacs-directory "straight.el"))
 
   ;; Load rest of the libraries
   (require 'init-ui)
   (require 'init-ux)
+  (require 'doom-core)
   (require 'init-ediff))
 
-;; For now instead of gchm, reset manually
-(setq best-gc-cons-threshold (* 64 1024 1024))
-(setq gc-cons-threshold best-gc-cons-threshold)
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %d seconds."
