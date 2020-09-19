@@ -23,4 +23,48 @@
       `((".*" . ,temporary-file-directory)))
 (setq undo-tree-auto-save-history t)
 
+
+;;; recentf
+
+(add-hook 'after-init-hook 'recentf-mode)
+
+(defun recentf-ido-find-file ()
+  "Find a recent file using Ido."
+  (interactive)
+  (let* ((file-assoc-list
+          (mapcar (lambda (x)
+                    (cons (file-name-nondirectory x)
+                          x))
+                  recentf-list))
+         (filename-list
+          (cl-remove-duplicates (mapcar #'car file-assoc-list)
+                             :test #'string=))
+         (filename (ido-completing-read "Choose recent file: "
+                                        filename-list
+                                        nil
+                                        t)))
+    (when filename
+      (find-file (cdr (assoc filename
+                             file-assoc-list))))))
+
+
+;; Key binding
+(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
+
+(setq recentf-max-saved-items 100
+      recentf-max-menu-items 15
+      ;; disable recentf-cleanup on Emacs start, because it can cause
+      ;; problems with remote files
+      recentf-auto-cleanup 'never)
+
+;;; Saving history
+(setq savehist-additional-variables
+      ;; search entries
+      '(search-ring regexp-search-ring)
+      ;; save every minute
+      savehist-autosave-interval 60
+      ;; keep the home clean
+      savehist-file (expand-file-name "savehist" user-emacs-directory))
+(savehist-mode t)
+
 (provide 'init-backups)
