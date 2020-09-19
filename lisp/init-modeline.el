@@ -10,6 +10,7 @@
 (diminish 'company-mode)
 (diminish 'flyspell-mode)
 (diminish 'git-gutter-mode)
+(diminish 'anaconda-mode)
 
 
 (provide 'init-modeline)

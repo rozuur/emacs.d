@@ -59,6 +59,7 @@
   (require 'init-hippie-expand)
   (require 'init-modeline)
   (require 'init-exec-path)
+  (require 'init-python)
   (require 'init-ediff))
 
 

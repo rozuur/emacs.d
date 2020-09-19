@@ -34,4 +34,9 @@
 (straight-use-package 'diminish)
 (straight-use-package 'git-gutter-fringe)
 
+;; Python packages
+(straight-use-package 'anaconda-mode)
+(straight-use-package 'company-anaconda)
+(straight-use-package 'blacken)
+
 (provide 'straight)
