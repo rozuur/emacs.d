@@ -55,6 +55,7 @@
   (require 'init-company)
   (require 'init-checks)
   (require 'init-grep)
+  (require 'init-spelling)
   (require 'init-hippie-expand)
   (require 'init-exec-path)
   (require 'init-ediff))

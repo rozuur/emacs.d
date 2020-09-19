@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'ag)
+
 (setq-default grep-highlight-matches t
               grep-scroll-output t)
 

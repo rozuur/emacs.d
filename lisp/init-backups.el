@@ -26,7 +26,7 @@
 
 ;;; recentf
 
-(add-hook 'after-init-hook 'recentf-mode)
+(require 'recentf)
 
 (defun recentf-ido-find-file ()
   "Find a recent file using Ido."
@@ -47,7 +47,6 @@
       (find-file (cdr (assoc filename
                              file-assoc-list))))))
 
-
 ;; Key binding
 (global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 
@@ -57,7 +56,12 @@
       ;; problems with remote files
       recentf-auto-cleanup 'never)
 
+(add-hook 'after-init-hook 'recentf-mode)
+
+
 ;;; Saving history
+(require 'savehist)
+
 (setq savehist-additional-variables
       ;; search entries
       '(search-ring regexp-search-ring)
