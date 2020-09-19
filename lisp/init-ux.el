@@ -52,9 +52,4 @@
 ;; revert buffers automatically when underlying files are changed externally
 (global-auto-revert-mode t)
 
-;; Ido mode
-(setq ido-enable-flex-matching t)
-(ido-mode t)
-(ido-yes-or-no-mode t)
-
 (provide 'init-ux)
