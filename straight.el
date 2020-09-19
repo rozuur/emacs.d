@@ -23,6 +23,8 @@
 (straight-use-package 'paren)
 (straight-use-package 'flycheck)
 (straight-use-package 'ido-yes-or-no)
+(straight-use-package 'crux)
+
 (straight-use-package 'exec-path-from-shell)
 
 
