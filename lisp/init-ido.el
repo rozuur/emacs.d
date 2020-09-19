@@ -15,7 +15,7 @@
       ido-max-prospects 10
       ido-save-directory-list-file (expand-file-name "ido.hist" user-emacs-directory)
       ido-default-file-method 'selected-window
-      ido-auto-merge-work-directories-length f)
+      ido-auto-merge-work-directories-length nil)
 
 
 (provide 'init-ido)
