@@ -24,7 +24,7 @@
 (straight-use-package 'flycheck)
 (straight-use-package 'ido-yes-or-no)
 (straight-use-package 'crux)
-
+(straight-use-package 'ace-window)
 (straight-use-package 'exec-path-from-shell)
 
 

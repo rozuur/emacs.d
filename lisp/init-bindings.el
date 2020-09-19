@@ -10,12 +10,14 @@
 ;; replace zap-to-char functionality with the more powerful zop-to-char
 (global-set-key [remap zap-to-char] 'zop-up-to-char)
 
+;; Use crux for better line editing
 (global-set-key [remap move-beginning-of-line] #'crux-move-beginning-of-line)
 (global-set-key [remap open-line] #'crux-smart-open-line)
 (global-set-key [remap kill-line] #'crux-smart-kill-line)
 (global-set-key [remap kill-whole-line] #'crux-kill-whole-line)
 
-
+;; Better window navigation using ace-window
+(global-set-key [remap other-window] 'ace-window)
 
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
