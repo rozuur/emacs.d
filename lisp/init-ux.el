@@ -45,13 +45,16 @@
       show-paren-when-point-in-periphery t)
 
 ;; Show trailing whitespace
-(setq show-trailing-whitespace 't)
+(setq show-trailing-whitespace t)
 ;; Delete trailing whitespace when saving
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; revert buffers automatically when underlying files are changed externally
+(global-auto-revert-mode t)
+
 ;; Ido mode
 (setq ido-enable-flex-matching t)
-(ido-mode 't)
-(ido-yes-or-no-mode 't)
+(ido-mode t)
+(ido-yes-or-no-mode t)
 
 (provide 'init-ux)
