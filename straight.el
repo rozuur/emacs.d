@@ -14,6 +14,8 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;; Use straight by default
+(setq straight-use-package-by-default t)
 
 ;; Also install packages
 (straight-use-package 'leuven-theme)
@@ -27,6 +29,6 @@
 (straight-use-package 'exec-path-from-shell)
 (straight-use-package 'ido-yes-or-no)
 (straight-use-package 'ido-completing-read+)
-
+(straight-use-package 'magit)
 
 (provide 'straight)
