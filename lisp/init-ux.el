@@ -44,6 +44,8 @@
       show-paren-when-point-inside-paren t
       show-paren-when-point-in-periphery t)
 
+;;; Buffers
+
 ;; Show trailing whitespace
 (setq show-trailing-whitespace t)
 ;; Delete trailing whitespace when saving

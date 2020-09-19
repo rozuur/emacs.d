@@ -33,10 +33,12 @@
 (straight-use-package 'powerline)
 (straight-use-package 'diminish)
 (straight-use-package 'git-gutter-fringe)
+(straight-use-package 'markdown-mode)
 
 ;; Python packages
 (straight-use-package 'anaconda-mode)
 (straight-use-package 'company-anaconda)
 (straight-use-package 'blacken)
+(straight-use-package 'py-autopep8)
 
 (provide 'straight)
