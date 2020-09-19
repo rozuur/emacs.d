@@ -30,5 +30,8 @@
 (straight-use-package 'ido-yes-or-no)
 (straight-use-package 'ido-completing-read+)
 (straight-use-package 'magit)
+(straight-use-package 'powerline)
+(straight-use-package 'diminish)
+(straight-use-package 'git-gutter-fringe)
 
 (provide 'straight)

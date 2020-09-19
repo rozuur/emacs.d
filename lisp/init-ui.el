@@ -57,6 +57,9 @@
 (setq indicate-buffer-boundaries nil
       indicate-empty-lines nil)
 
+;; Display git gutter in fringe
+(require 'git-gutter-fringe)
+(global-git-gutter-mode t)
 
 ;; The native border "consumes" a pixel of the fringe on righter-most splits,
 ;; `window-divider' does not. Available since Emacs 25.1.

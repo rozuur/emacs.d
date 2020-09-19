@@ -57,6 +57,7 @@
   (require 'init-grep)
   (require 'init-spelling)
   (require 'init-hippie-expand)
+  (require 'init-modeline)
   (require 'init-exec-path)
   (require 'init-ediff))
 
