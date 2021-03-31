@@ -41,4 +41,8 @@
 (straight-use-package 'blacken)
 (straight-use-package 'py-autopep8)
 
+;; Go with language server
+(straight-use-package 'lsp-mode)
+(straight-use-package 'go-mode)
+
 (provide 'straight)
