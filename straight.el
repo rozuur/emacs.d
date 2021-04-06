@@ -34,6 +34,7 @@
 (straight-use-package 'diminish)
 (straight-use-package 'git-gutter-fringe)
 (straight-use-package 'markdown-mode)
+(straight-use-package 'yasnippet-snippets)
 
 ;; Python packages
 (straight-use-package 'anaconda-mode)
